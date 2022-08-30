@@ -2,9 +2,10 @@ import Head from 'next/head';
 import React, { Fragment } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import AccordionImage from '../public/images/accordion_gallery/Russian_accordion.jpg'
+import AccordionImage from '../public/images/accordion_gallery/Russian_accordion.jpg';
 import classes from '../styles/SampleAccordionWithArrows.module.css';
-import Accordion from "../components/accordion/Accordion";
+import Accordion from '../components/accordion/Accordion';
+import AboutSection from '../components/aboutSection/AboutSection';
 
 const SampleAccordionWithArrows = () => {
 
@@ -56,50 +57,24 @@ const SampleAccordionWithArrows = () => {
     ];
 
     return (
-        <Fragment>
-
-            <Head>
-                <title>accordion with arrows</title>
-                <meta name="description" content="a responsive accordion with variable heights for panels" />
-                <meta property="og:image" content="images/accordion_gallery/Russian_accordion.jpg" />
-            </Head>
-
-            <div className="page" role="main">
-                <h1 className="heading_01" >
-                    accordion with arrows
-                </h1>
-                <h2 className={classes.heading_02} >
-                    features:
-                </h2>
-                <div className={classes.bullet_list}>
-                  <ul className={classes.heading_03}>
-                    <li>
-                      responsive
-                    </li>
-                    <li>
-                      variable height
-                    </li>
-                    <li>
-                      accessible following WCAG 2.1 standards
-                    </li>
-                    <li>
-                      dynamic
-                    </li>
-                    <li>
-                      smooth transitions
-                    </li>
-                  </ul>  
-                </div>
-                <div className={classes.about}>
-                    <div className={classes.about_sections} >
-                        <Accordion aboutSections={aboutSections} />
-                    </div>
-                </div>
-                <h2 className={classes.heading_02} >
-                    designed and developed by <Link href="https://www.stephendewyerwebwork.com" passHref={true} target="_blank" aria-label="link to portfolio website of stephen garrett dewyer">stephen garrett dewyer</Link>
-                </h2>
+      <Fragment>
+          <Head>
+              <title>accordion with arrows</title>
+              <meta name="description" content="a responsive accordion with variable heights for panels" />
+              <meta property="og:image" content="images/accordion_gallery/Russian_accordion.jpg" />
+          </Head>
+          <div className="page" role="main">
+            <AboutSection />
+            <div className={classes.about}>
+              <div className={classes.about_sections} >
+                <Accordion aboutSections={aboutSections} />
+              </div>
             </div>
-        </Fragment>
+            <h2 className={classes.credits} >
+              designed and developed by <Link href="https://www.stephendewyerwebwork.com" passHref={true} target="_blank" aria-label="link to portfolio website of stephen garrett dewyer">stephen garrett dewyer</Link>
+            </h2>
+          </div>
+      </Fragment>
     )
 }
 

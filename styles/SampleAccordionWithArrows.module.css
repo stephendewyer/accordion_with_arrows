@@ -47,6 +47,14 @@
   margin-bottom: 40px;
 }
 
+.credits {
+  font-size: 24px;
+  color: #838B6A;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
 @media screen and (max-width: 751px) {
 
   .heading_02 {
@@ -77,5 +85,9 @@
       margin-bottom: 20px;
       width: 90%;        
    }
+
+   .credits {
+    font-size: 18px;
+  }
 
 }
