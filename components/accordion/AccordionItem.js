@@ -17,8 +17,8 @@ const AccordionItem = ({
     const content = useRef(null);
 
     useEffect(() => {
-        setHeight(height = content.current.scrollHeight) 
-    });
+        setHeight(content.current.scrollHeight) 
+    }, [isActive]);
 
     return (
         <div 

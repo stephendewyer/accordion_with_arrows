@@ -38,17 +38,21 @@ const AboutSection = () => {
                     <h2 className={styles.heading_02} >
                         code:
                     </h2>
-                    <Link href="https://github.com/stephendewyer/accordion_with_arrows" passHref={true} aria-label="link to accordion with arrows on GitHub">
-                        <a target="_blank" rel="noopener noreferrer">
-                            <ExternalLinkButton>
-                                <div>
-                                    GitHub
-                                </div> 
-                                <div className={styles.external_link_icon} >
-                                    <Image src={ExternalLinkIcon} layout="responsive" alt="external link icon"/>
-                                </div>
-                            </ExternalLinkButton>
-                        </a>
+                    <Link 
+                        href="https://github.com/stephendewyer/accordion_with_arrows"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        passHref={true} 
+                        aria-label="link to accordion with arrows on GitHub"
+                    >
+                        <ExternalLinkButton>
+                            <div>
+                                GitHub
+                            </div> 
+                            <div className={styles.external_link_icon} >
+                                <Image src={ExternalLinkIcon} layout="responsive" alt="external link icon"/>
+                            </div>
+                        </ExternalLinkButton>
                     </Link>
                 </div>
             </div>
